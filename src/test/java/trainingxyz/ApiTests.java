@@ -24,10 +24,9 @@ public class ApiTests {
         .queryParam("id", 2)
       .when()
         .get(endpoint)
-      .prettyPrint();
-      // .then()
-      //   .assertThat()
-      //     .statusCode(200);
+      .then()
+        .assertThat()
+          .statusCode(200);
   }
 
   @Test
