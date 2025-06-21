@@ -57,4 +57,16 @@ public class ApiTests {
     var response = given().body(body).when().put(endpoint).then();
     response.log().body();
   }
+
+  @Test
+  public void deleteProduct(){
+    String endpoint = baseUrl + "product/delete.php";
+    String body = """
+        {
+          "id": 19
+        }
+        """;
+    var response = given().body(body).when().delete(endpoint).then();
+    response.log().body();
+  }
 }
