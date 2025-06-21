@@ -26,4 +26,5 @@ public class ApiTests {
       .then();
     response.log().body();
   }
+
 }
