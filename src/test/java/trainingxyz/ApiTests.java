@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import models.Product;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
 
 public class ApiTests {
 
