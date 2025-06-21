@@ -83,4 +83,30 @@ public class ApiTests {
     var response = given().body(product).when().post(endpoint).then();
     response.log().body();
   }
+
+  /*
+   * TODO: Your challenge is to complete a full life cycle of a resource by
+   * creating, updating, viewing, and deleting a product.
+   */
+  @Test
+  public void createSweatband()
+  {
+      //TODO: add solution here
+  }
+
+  @Test
+  public void updateSweatband() {
+    // TODO: add solution here
+  }
+
+  @Test
+  public void getSweatband() {
+    // TODO: add solution here
+  }
+
+  @Test
+  public void deleteSweatband() {
+    // TODO: add solution here
+  }
+
 }
