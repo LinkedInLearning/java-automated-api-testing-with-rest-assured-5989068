@@ -84,29 +84,58 @@ public class ApiTests {
     response.log().body();
   }
 
-  /*
-   * TODO: Your challenge is to complete a full life cycle of a resource by
-   * creating, updating, viewing, and deleting a product.
-   */
+
   @Test
   public void createSweatband()
   {
-      //TODO: add solution here
+      String endpoint = baseUrl + "product/create.php";
+      Product product = new Product(
+        "Sweatband",
+        "White sweatband. One size fits all.",
+        5,
+        3
+      );
+      var response = given().body(product).when().post(endpoint).then();
+      response.log().body();
   }
 
   @Test
   public void updateSweatband() {
-    // TODO: add solution here
+    String endpoint = baseUrl + "product/update.php";
+    Product product = new Product(
+      20,
+      "Sweatband",
+      "White sweatband. One size fits all.",
+      5.99,
+      3,
+      "Active Wear - Unisex");
+    
+    var response = given().body(product).when().put(endpoint).then();
+    response.log().body();
   }
 
   @Test
   public void getSweatband() {
-    // TODO: add solution here
+    String endpoint = baseUrl + "product/read_one.php";
+    var response = 
+      given()
+        .queryParam("id", 20)
+      .when()
+        .get(endpoint)
+      .then();
+    response.log().body();
   }
 
   @Test
   public void deleteSweatband() {
-    // TODO: add solution here
+    String endpoint = baseUrl + "product/delete.php";
+    String body = """
+        {
+          "id": 20
+        }
+        """;
+    var response = given().body(body).when().delete(endpoint).then();
+    response.log().body();
   }
 
 }
