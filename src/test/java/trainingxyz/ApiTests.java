@@ -27,4 +27,18 @@ public class ApiTests {
     response.log().body();
   }
 
+  @Test
+  public void createProduct(){
+    String endpoint = baseUrl + "product/create.php";
+    String body = """
+        {
+          "name": "Water Bottle",
+          "description": "Blue water bottle. Holds 64 ounces.",
+          "price": 12,
+          "category_id": 3
+        }
+        """;
+    var response = given().body(body).when().post(endpoint).then();
+    response.log().body();
+  }
 }
