@@ -20,13 +20,13 @@ public class ApiTests {
   @Test
   public void getProduct(){
     String endpoint = baseUrl + "product/read_one.php";
-    var response = 
-      given()
+    given()
         .queryParam("id", 2)
       .when()
         .get(endpoint)
-      .then();
-    response.log().body();
+      .then()
+        .assertThat()
+          .statusCode(200);
   }
 
   @Test
