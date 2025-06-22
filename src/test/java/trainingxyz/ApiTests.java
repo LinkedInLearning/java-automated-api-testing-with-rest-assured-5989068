@@ -191,6 +191,15 @@ public class ApiTests {
       299,
       2,
       "Active Wear - Women");
+
+      Product actualProduct =
+        given()
+          .param("id", 2)
+        .when()
+          .get(endpoint)
+            .as(Product.class);
+
+      assertThat(actualProduct, equalTo(expectedProduct));
     
   }
 }
