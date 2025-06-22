@@ -145,4 +145,15 @@ public class ApiTests {
     response.log().body();
   }
 
+  @Test
+  public void getProducts(){
+    String endpoint = baseUrl + "product/read.php";
+    given()
+    .when()
+      .get(endpoint)
+    .then()
+      .log()
+      .body();
+  }
+
 }
