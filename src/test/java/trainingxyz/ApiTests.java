@@ -200,6 +200,14 @@ public class ApiTests {
             .as(Product.class);
 
       assertThat(actualProduct, equalTo(expectedProduct));
-    
+  }
+
+  /*
+   * TODO: Your challenge is to make an API request to get the Multi-Vitamin product (id=18).
+   * Verify the response's status code, content-type header, and each field of the body.
+   */
+  @Test
+  public void getMultiVitamins(){
+
   }
 }
