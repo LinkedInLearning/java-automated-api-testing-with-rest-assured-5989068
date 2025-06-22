@@ -166,4 +166,12 @@ public class ApiTests {
           .body("records.id[0]", equalTo(21));
   }
 
+  @Test
+  public void getProductsHeaders(){
+    String endpoint = baseUrl + "product/read.php";
+    given()
+    .when()
+      .get(endpoint)
+    .then();
+  }
 }
