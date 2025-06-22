@@ -153,9 +153,10 @@ public class ApiTests {
       .get(endpoint)
     .then()
       .log()
-      .body()
+        .body()
         .assertThat()
           .statusCode(200)
+          .header("Content-Type", equalTo("application/json; charset=UTF-8"))
           .body("records.size()", greaterThan(0))
           .body("records.id", everyItem(notNullValue()))
           .body("records.name", everyItem(notNullValue()))
@@ -172,6 +173,9 @@ public class ApiTests {
     given()
     .when()
       .get(endpoint)
-    .then();
+    .then()
+      .log()
+        .headers()
+          .header("Content-Type", equalTo("application/json; charset=UTF-8"));
   }
 }
