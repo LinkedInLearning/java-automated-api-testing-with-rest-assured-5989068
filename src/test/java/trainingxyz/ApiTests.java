@@ -153,7 +153,17 @@ public class ApiTests {
       .get(endpoint)
     .then()
       .log()
-      .body();
+      .body()
+        .assertThat()
+          .statusCode(200)
+          .body("records.size()", greaterThan(0))
+          .body("records.id", everyItem(notNullValue()))
+          .body("records.name", everyItem(notNullValue()))
+          .body("records.description", everyItem(notNullValue()))
+          .body("records.price", everyItem(notNullValue()))
+          .body("records.category_id", everyItem(notNullValue()))
+          .body("records.category_name", everyItem(notNullValue()))
+          .body("records.id[0]", equalTo(21));
   }
 
 }
