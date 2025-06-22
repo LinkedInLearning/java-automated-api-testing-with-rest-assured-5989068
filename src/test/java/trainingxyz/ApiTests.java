@@ -1,5 +1,7 @@
 package trainingxyz;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 import models.Product;
@@ -208,6 +210,26 @@ public class ApiTests {
    */
   @Test
   public void getMultiVitamins(){
+    String endpoint = baseUrl + "product/read_one.php";
 
+    var response = 
+      given()
+        .param("id", 18)
+      .when() 
+        .get(endpoint);
+
+    response.then().assertThat().statusCode(200);
+    response.then().assertThat().header("Content-Type", equalTo("application/json"));
+
+    Product actualProduct = response.as(Product.class);
+    Product expectedProduct = new Product(
+      18,
+      "Multi-Vitamin (90 capsules)",
+      "A daily dose of our Multi-Vitamins fulfills a day’s nutritional needs for over 12 vitamins and minerals.",
+      10.00,
+      4,
+      "Supplements");
+
+    assertThat(actualProduct, equalTo(expectedProduct));
   }
 }
