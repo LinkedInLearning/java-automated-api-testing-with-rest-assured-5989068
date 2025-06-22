@@ -6,6 +6,7 @@ import models.Product;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ApiTests {
 
@@ -177,5 +178,19 @@ public class ApiTests {
       .log()
         .headers()
           .header("Content-Type", equalTo("application/json; charset=UTF-8"));
+  }
+
+  @Test
+  public void getDeserializedProduct(){
+    String endpoint = baseUrl + "product/read_one.php";
+
+    var expectedProduct = new Product(
+      2,
+      "Cross-Back Training Tank",
+      "The most awesome phone of 2013!",
+      299,
+      2,
+      "Active Wear - Women");
+    
   }
 }
