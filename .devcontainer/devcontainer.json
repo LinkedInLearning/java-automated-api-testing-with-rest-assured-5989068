@@ -5,6 +5,7 @@
     "docker-in-docker": "latest"
   },
   "postCreateCommand": "docker-compose up -d",
+  "postStartCommand": "docker-compose up -d",
   "customizations": {
     "vscode": {
       "extensions": [
