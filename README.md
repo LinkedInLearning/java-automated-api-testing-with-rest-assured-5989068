@@ -5,6 +5,8 @@ This is the repository for the LinkedIn Learning course `Java: Automated API Tes
 
 ## Course Description
 
+In this course, Java Champion Angie Jones dives into the world of automated API testing with Java and Rest Assured and shows you how to ensure your APIs function flawlessly. Learn the essentials of making API requests—GET, POST, PUT, DELETE—and reinforce your understanding of API anatomy. Discover how to send supplementary data, retrieve and parse responses, and validate API outputs against expected results. Delve into handling complex response bodies, serializing request data, and deserializing responses into Java objects. Build your ability to independently test APIs, save time, and reduce manual errors. By the end of the course, you will be equipped to write reliable tests that deliver accurate validations of API interactions.
+
 _See the readme file in the main branch for updated instructions and information._
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
@@ -23,25 +25,17 @@ To resolve this issue:
 	
     Add changes to git using this command: git add .
 	Commit changes using this command: git commit -m "some message"
-
-## Installing
-1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
-
+ 
 ## Instructor
 
-Instructor name
+[Angie Jones](https://www.linkedin.com/in/angiejones/)
 
-Instructor description
-
-                            
-
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/).
+Test Automation Architect and Java Champion
+                        
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/angie-jones).
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
+[lil-course-url]: https://www.linkedin.com/learning/java-automated-api-testing-with-rest-assured-26288114
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D560DAQGyo2JsSGBIKg/learning-public-crop_675_1200/B56ZgfSCeLG0Ak-/0/1752871479474?e=2147483647&v=beta&t=Dx_DiISQAKhEclZYm15__JS01rUIyXbAMEq0QFv-WhQ
